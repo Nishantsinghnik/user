@@ -1,0 +1,130 @@
+.app {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #7cf4ff, #000000);
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #000000;
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(64, 255, 0, 0.3);
+}
+
+.card {
+  background: linear-gradient(to bottom, #456a6b, #00f2ff);
+  box-shadow: 0 15px 25px rgba(64, 255, 0, 0.3);
+  border-radius: 20px;
+  width: 400px;
+  margin: 20px auto;
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3);
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  margin: 0 auto 15px;
+  display: block;
+  border: 5px solid rgba(0, 238, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(64, 255, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+.card h2 {
+  margin: 15px 0;
+  font-size: 2rem;
+  color: #56f4ff;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.card h2:hover {
+  color:rgba(64, 255, 0, 0.3);
+}
+
+.card p {
+  margin: 10px 0;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.card p:hover {
+  color: #2b5876;
+}
+
+.card p strong {
+  color: #000;
+}
+
+.loading {
+  font-size: 1.8rem;
+  color: #fff;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 70%);
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: rotate(45deg) translateX(-200%);
+  }
+
+  100% {
+    transform: rotate(45deg) translateX(200%);
+  }
+}
